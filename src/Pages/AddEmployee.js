@@ -1,20 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-// export default function AddEmployee() {
-//   return (
-//     <>
-//       <h1>this is a thing</h1>
-//     </>
-//   )
-// }
-
 export default function AddEmployee() {
   const [employee, addEmployee] = useState('')
   const [dob, addDob] = useState('')
   const [email, addEmail] = useState('')
   const [address, addAddress] = useState('')
   const [zip, addZip] = useState('')
+  const [jobTitle, addJobTitle] = useState('')
 
   const addEmployeeToList = e => {
     e.preventDefault()
@@ -26,7 +19,8 @@ export default function AddEmployee() {
           birthday: dob,
           email: email,
           address: address,
-          zip: zip
+          zip: zip,
+          jobTitle: jobTitle
         }
       )
       .then(resp => {
@@ -74,6 +68,14 @@ export default function AddEmployee() {
           value={zip}
           onChange={e => {
             addZip(e.target.value)
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Job Title"
+          value={jobTitle}
+          onChange={e => {
+            addJobTitle(e.target.value)
           }}
         />
         <button>+</button>
