@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-// import { link } from 'react-router-dom'
+
+import Employee from './Employee'
 
 export default function AllEmployees() {
-  const [info, getInfo] = useState({})
+  const [employeeList, getEmployeeList] = useState([])
 
   const fetchEmployees = () => {
     axios
       .get('https://sdg-staff-directory-app.herokuapp.com/api/Plix/Employees')
       .then(resp => {
         console.log({ resp })
-        getInfo({
-          info: resp.data
-        })
+        getEmployeeList(resp.data)
       })
   }
   useEffect(() => {
@@ -21,11 +20,15 @@ export default function AllEmployees() {
 
   return (
     <>
-      <h2>
-        {info.map((info, index) => {
-          return { info }
+      <ul>
+        {employeeList.map(employee => {
+          return (
+            <li>
+              <Employee key={employee.id} employee={employee} />
+            </li>
+          )
         })}
-      </h2>
+      </ul>
     </>
   )
 }

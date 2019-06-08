@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import AllEmployees from './Pages/AllEmployees'
-import Employee from './Pages/Employee'
+// import Employee from './Pages/Employee'
 import AddEmployee from './Pages/AddEmployee'
 
 class App extends Component {
