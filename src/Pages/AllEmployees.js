@@ -20,15 +20,15 @@ export default function AllEmployees() {
 
   return (
     <>
-      <ul>
+      <section>
         {employeeList.map(employee => {
           return (
-            <li>
+            <section>
               <Employee key={employee.id} employee={employee} />
-            </li>
+            </section>
           )
         })}
-      </ul>
+      </section>
     </>
   )
 }
