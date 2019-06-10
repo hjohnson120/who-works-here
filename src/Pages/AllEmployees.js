@@ -20,6 +20,7 @@ export default function AllEmployees() {
 
   return (
     <>
+      <h1 className="header">List of All Employee's at Plix</h1>
       <section>
         {employeeList.map(employee => {
           return (

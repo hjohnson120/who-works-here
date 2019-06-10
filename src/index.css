@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Tinos&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
   background-color: snow;
@@ -6,10 +8,22 @@
 html {
   height: 100%;
 }
-
+.header {
+  font-family: 'Tinos', serif;
+  text-align: center;
+  color: seagreen;
+  font-size: 3rem;
+}
 body {
   margin: 0;
   min-height: 100%;
+  font-family: 'Tinos', serif;
+}
+hr {
+  width: 60%;
+  margin-right: 40%;
+  height: 4px;
+  background-color: grey;
 }
 
 form {
@@ -21,15 +35,23 @@ form {
 
 button {
   width: 6%;
-  margin-left: 0.4%;
+  margin-right: 0.4%;
+  color: grey;
+}
+
+button:hover {
+  background-color: seagreen;
+  border-radius: 12%;
+  color: black;
 }
 .employee-list {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
-  margin: 4%;
+  margin: 5%;
 }
 .input {
   font-display: bold;
   font-weight: 900;
+  color: seagreen;
+}
+p {
+  color: grey;
 }

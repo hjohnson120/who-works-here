@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default function Employee(props) {
   const [deletedEmployee, sendDeletedEmployee] = useState([])
@@ -29,9 +30,11 @@ export default function Employee(props) {
           <span className="input">Job Title: </span>
           {props.employee.jobTitle}
         </p>
-        <button>Select</button>
+        <Link to={`/employee/${props.employee.id}`}>
+          <button>Select</button>
+        </Link>
         <button onClick={removeEmployee}>Delete</button>
-        {/* <Link to={`$/employee/${props.employee.id}}/> */}
+        <hr />
       </section>
     </>
   )
