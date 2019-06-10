@@ -21,10 +21,14 @@ export default function Employee(props) {
     <>
       <section className="employee-list">
         <p>
-          Name: {props.employee.firstName}
+          <span className="input">Name: </span>
+          {props.employee.firstName}
           <span>{props.employee.lastName}</span>
         </p>
-        <p>Job Title: {props.employee.jobTitle}</p>
+        <p>
+          <span className="input">Job Title: </span>
+          {props.employee.jobTitle}
+        </p>
         <button>Select</button>
         <button onClick={removeEmployee}>Delete</button>
         {/* <Link to={`$/employee/${props.employee.id}}/> */}

@@ -1,5 +1,6 @@
 :root {
   font: 16px / 1 sans-serif;
+  background-color: snow;
 }
 
 html {
@@ -12,21 +13,23 @@ body {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   width: 200px;
-  margin: 3%;
+  margin: 10%;
 }
-button {
-  width: 20px;
-  display: flex;
-  display: column;
-}
+
 button {
   width: 6%;
+  margin-left: 0.4%;
 }
 .employee-list {
   /* display: flex; */
   /* flex-wrap: wrap; */
   /* justify-content: space-between; */
+  margin: 4%;
+}
+.input {
+  font-display: bold;
+  font-weight: 900;
 }
