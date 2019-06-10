@@ -14,6 +14,7 @@ export default function AllEmployees() {
         getEmployeeList(resp.data)
       })
   }
+
   useEffect(() => {
     fetchEmployees()
   }, [])
